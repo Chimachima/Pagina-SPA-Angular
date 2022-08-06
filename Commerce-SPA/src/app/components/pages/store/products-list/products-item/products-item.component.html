@@ -1,0 +1,12 @@
+<div class="card mx-2 my-2" style="width: 14rem; min-height: 30rem;">
+    <div class="d-flex align-bottom mx-2 my-2">
+        <img [src]="movie.url" class="card-img-top">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-sm-center text-truncate">{{movie.name}}</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item text-sm-center">Duração: {{movie.durationInMinutes}} minutos</li>
+            <li class="list-group-item text-sm-center">Gênero: {{movie.genre}}</li>
+        </ul>
+    </div>
+</div>
