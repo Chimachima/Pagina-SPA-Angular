@@ -1,14 +1,12 @@
 package com.database.bancoDeDados.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "TB_MOVIES")
-@Getter
-@Setter
+@Data
 public class MoviesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,4 +16,12 @@ public class MoviesModel {
     private String genre;
     private String url;
 
+
+    public MoviesModel(){}
+    public MoviesModel(String name, Integer durationInMinutes, String genre, String url) {
+        this.name = name;
+        this.durationInMinutes = durationInMinutes;
+        this.genre = genre;
+        this.url = url;
+    }
 }
